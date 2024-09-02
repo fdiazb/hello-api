@@ -1,0 +1,17 @@
+@hostname = localhost
+@port = 3000
+@host = {{hostname}}:{{port}}
+
+### Get health
+GET http://{{host}}/health
+
+
+### Login
+POST http://{{host}}/auth/login
+content-type: application/json
+Authorization: token xxx
+
+{
+    "username": "user",
+    "password": "pass"
+}
